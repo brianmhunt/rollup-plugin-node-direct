@@ -23,7 +23,9 @@ describe.only( 'rollup-plugin-node-direct', function () {
     rollup.rollup({
       entry: 'spec/entry-A.js',
       plugins: [
-        nodeDirect({ paths: ['path'], skip: ['vlq'] })
+        nodeDirect({
+          paths: ['path'], skip: ['vlq'], verbose: true
+        })
       ]
     }).then( executeBundle ).then( module => {
       assert.equal( module.exports, '4H' );
