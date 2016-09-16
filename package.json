@@ -1,0 +1,46 @@
+{
+  "name": "rollup-plugin-node-direct",
+  "description": "Bundle third-party dependencies in given directories",
+  "version": "1.0.0",
+  "devDependencies": {
+    "buble": "^0.13.2",
+    "es5-ext": "^0.10.11",
+    "eslint": "^2.11.1",
+    "mocha": "^3.0.2",
+    "rollup": "^0.35.9",
+    "rollup-plugin-buble": "^0.13.0",
+    "string-capitalize": "^1.0.1"
+  },
+  "main": "dist/rollup-plugin-node-direct.cjs.js",
+  "module": "dist/rollup-plugin-node-direct.es.js",
+  "jsnext:main": "dist/rollup-plugin-node-direct.es.js",
+  "scripts": {
+    "pretest": "rollup -c",
+    "test": "mocha",
+    "posttest": "eslint src test/*.js",
+    "prepublish": "npm test"
+  },
+  "files": [
+    "src",
+    "dist"
+  ],
+  "dependencies": {
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/brianmhunt/rollup-plugin-node-direct.git"
+  },
+  "keywords": [
+    "rollup",
+    "rollup-plugin",
+    "es2015",
+    "npm",
+    "modules"
+  ],
+  "author": "Brian M Hunt <brianmhunt@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/brianmhunt/rollup-plugin-node-direct/issues"
+  },
+  "homepage": "https://github.com/brianmhunt/rollup-plugin-node-direct#readme"
+}
