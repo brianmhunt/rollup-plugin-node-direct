@@ -22,26 +22,7 @@ rollup({
     nodeResolve({
       paths: [ '../where-the-modules-are' ],
 
-      // use "module" field for ES6 module if possible
-      module: true, // Default: true
-
-      // use "jsnext:main" if possible
-      // – see https://github.com/rollup/rollup/wiki/jsnext:main
-      jsnext: true,  // Default: true
-
-      // use "main" field or index.js, even if it's not an ES6 module
-      // (needs to be converted from CommonJS to ES6
-      // – see https://github.com/rollup/rollup-plugin-commonjs
-      main: true,  // Default: true
-
-      // if there's something your bundle requires that you DON'T
-      // want to include, add it to 'skip'. Local and relative imports
-      // can be skipped by giving the full filepath. E.g.,
-      // `path.resolve('src/relative-dependency.js')`
       skip: [ 'some-big-dependency' ],  // Default: []
-
-      // not all files you want to resolve are .js files
-      extensions: [ '.js', '.json' ],  // Default: ['.js']      
     })
   ]
 }).then( bundle => bundle.write({ dest: 'bundle.js', format: 'iife' }) );
