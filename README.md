@@ -4,6 +4,19 @@ Locate modules with Node-style `package.json` files in given directories.
 
 Much like rollup-plugin-node-resolve.
 
+## Alternative
+
+As an alternative to this plugin, consider using node-resolve with `customResolveOptions`, like this:
+
+```
+import nodeResolve from 'rollup-plugin-node-resolve'
+
+plugins.push(nodeResolve({jsnext: true, customResolveOptions: {moduleDirectory: "packages"}}))
+```
+
+where `plugins` is passed to / returrned as part of the `rollup` config.
+
+
 ## Installation
 
 ```bash
